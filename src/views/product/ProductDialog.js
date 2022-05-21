@@ -120,6 +120,10 @@ const ProductDialog = ({ item, open, handleClose }) => {
       } else {
         save({ ...product, thumbnail: response.data })
           .then(({ data }) => {
+            if (data.id == null) {
+              toast.warning('Sản phẩm đã tồn tại')
+              return
+            }
             toast.success(`Thêm mới thành công`)
             handleCloseDialog()
           })
@@ -140,6 +144,10 @@ const ProductDialog = ({ item, open, handleClose }) => {
       } else {
         save(product)
           .then(({ data }) => {
+            if (data.id == null) {
+              toast.warning('Sản phẩm đã tồn tại')
+              return
+            }
             toast.success(`Thêm mới thành công`)
             handleCloseDialog()
           })
@@ -184,7 +192,7 @@ const ProductDialog = ({ item, open, handleClose }) => {
   }
 
   const listSize = [
-    { name: 'Size SM', value: 'SM' },
+    { name: 'Size S', value: 'S' },
     { name: 'Size M', value: 'M' },
     { name: 'Size L', value: 'L' },
     { name: 'Size XL', value: 'XL' },

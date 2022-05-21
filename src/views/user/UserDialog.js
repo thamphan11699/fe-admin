@@ -46,7 +46,6 @@ const UserDialog = (props) => {
 
   const [roleOption, setRoleOption] = useState([])
   const handleChange = (event, obj) => {
-    console.log(event.target.value)
     if (obj === 'userInfo') {
       setItemForm({
         ...itemForm,
@@ -108,12 +107,10 @@ const UserDialog = (props) => {
 
       update(itemForm.id, itemForm)
         .then(({ data }) => {
-          console.log(data)
           handleCloseDialog()
           toast.success('Sửa thành công')
         })
         .catch((err) => {
-          console.log(err)
           toast.success('Sửa thất bại')
         })
     } else {
@@ -122,12 +119,10 @@ const UserDialog = (props) => {
       }
       save(itemForm)
         .then(({ data }) => {
-          console.log(data)
           handleCloseDialog()
           toast.success('Thêm mới thành công')
         })
         .catch((err) => {
-          console.log(err)
           toast.success('Thêm mới thất bại')
         })
     }

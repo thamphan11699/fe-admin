@@ -75,11 +75,11 @@ const User = () => {
     setSearchObj({ ...searchObj, pageSize: parseInt(event.target.value, 10) })
   }
 
-  const handleEdit = (id) => {
-    getOne(id).then(({ data }) => {
+  const handleEdit = async (id) => {
+    await getOne(id).then(({ data }) => {
       setItem(data)
-      setOpenDialog(true)
     })
+    setOpenDialog(true)
   }
 
   const handleDelete = (id) => {
