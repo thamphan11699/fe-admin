@@ -62,12 +62,12 @@ const Category = () => {
     clear(item.id)
       .then(({ data }) => {
         console.log(data)
-        toast.success('Delete item successfully!')
+        toast.success('Xóa Danh mục thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa danh mục không thành công!')
       })
     setItem({})
   }
@@ -190,8 +190,8 @@ const Category = () => {
       <CategoryDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="Xác nhận xóa"
+        content="Bạn có muốn xóa danh mục?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />

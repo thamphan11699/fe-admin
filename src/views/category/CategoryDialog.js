@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import {
   Button,
   Card,
@@ -13,11 +11,13 @@ import {
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import { getParent, save, update } from './CategoryService'
+import axios from 'axios'
+import { DropzoneArea } from 'material-ui-dropzone'
+import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { DropzoneArea } from 'material-ui-dropzone'
-import axios from 'axios'
+import { getParent, save, update } from './CategoryService'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -220,11 +220,7 @@ const CategoryDialog = ({ item, open, handleClose }) => {
                     <CardMedia
                       className={classes.media}
                       style={{}}
-                      image={
-                        category.id
-                          ? category.thumbnail
-                          : 'https://cdn.pixabay.com/photo/2018/10/23/08/18/sexy-girl-3767276__340.jpg'
-                      }
+                      image={category.id ? category.thumbnail : ''}
                       title={category.title}
                     />
                   </Card>

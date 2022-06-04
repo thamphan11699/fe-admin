@@ -328,7 +328,6 @@ const ProductDialog = ({ item, open, handleClose }) => {
             {listSize != null && listSize.length > 0 && product.parent && (
               <Grid item md={6} xs={12}>
                 <Autocomplete
-                  disabled={product.id ? true : false}
                   value={product.size ? listSize.find((item) => item.value === product.size) : null}
                   onChange={(event, option) => {
                     handleChangeSize(event, option)
@@ -353,7 +352,6 @@ const ProductDialog = ({ item, open, handleClose }) => {
             {listColor != null && listColor.length > 0 && product.parent && (
               <Grid item md={6} xs={12}>
                 <Autocomplete
-                  disabled={product.id ? true : false}
                   value={product.color ? product.color : null}
                   onChange={(event, option) => {
                     handleChangeColor(event, option)
@@ -484,11 +482,7 @@ const ProductDialog = ({ item, open, handleClose }) => {
                 <CardMedia
                   className={classes.media}
                   style={{}}
-                  image={
-                    product.id
-                      ? product.thumbnail
-                      : 'https://cdn.pixabay.com/photo/2018/10/23/08/18/sexy-girl-3767276__340.jpg'
-                  }
+                  image={product.id ? product.thumbnail : ''}
                   title={product.title}
                 />
               </Card>

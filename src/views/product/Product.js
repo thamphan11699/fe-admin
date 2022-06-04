@@ -62,12 +62,12 @@ const Product = () => {
     clear(item.id)
       .then(({ data }) => {
         console.log(data)
-        toast.success('Delete item successfully!')
+        toast.success('Xóa sản phẩm thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa ssanr phẩm không thành công!')
       })
     setItem({})
   }
@@ -192,8 +192,8 @@ const Product = () => {
       <ProductDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="Xác nhận xóa"
+        content="Bạn muốn xáo sản phẩm này?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />

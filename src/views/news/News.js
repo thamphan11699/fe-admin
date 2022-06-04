@@ -62,12 +62,12 @@ const News = () => {
     clear(item.id)
       .then(({ data }) => {
         console.log(data)
-        toast.success('Delete item successfully!')
+        toast.success('Xóa tin tức thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa tin tức không thành công!')
       })
     setItem({})
   }
@@ -188,8 +188,8 @@ const News = () => {
       <NewsDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="Xác nhận xóa"
+        content="Bạn muôn xoa tin tức này?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />

@@ -61,12 +61,12 @@ const ContextProvider = () => {
     setOpenConfirmDialog(false)
     clear(item.id)
       .then(({ data }) => {
-        toast.success('Delete item successfully!')
+        toast.success('Xóa NCC thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa NCC không thành công!')
       })
     setItem({})
   }
@@ -192,8 +192,8 @@ const ContextProvider = () => {
       <ContextProviderDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="Xác nhận xóa"
+        content="Bạn muốn xóa NCC này?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />

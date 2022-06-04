@@ -61,12 +61,12 @@ const WareHouse = () => {
     setOpenConfirmDialog(false)
     clear(item.id)
       .then(({ data }) => {
-        toast.success('Delete item successfully!')
+        toast.success('Xóa kho thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa kho mục không thành công!')
       })
     setItem({})
   }
@@ -188,8 +188,8 @@ const WareHouse = () => {
       <WareHouseDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="Xác nhận  xóa"
+        content="Bạn muốn xóa kho này?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />

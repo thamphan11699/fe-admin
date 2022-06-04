@@ -180,11 +180,7 @@ const NewsDialog = ({ item, open, handleClose }) => {
                 <CardMedia
                   className={classes.media}
                   style={{}}
-                  image={
-                    news != null && news.id
-                      ? news.thumbnail
-                      : 'https://cdn.pixabay.com/photo/2018/10/23/08/18/sexy-girl-3767276__340.jpg'
-                  }
+                  image={news != null && news.id ? news.thumbnail : ''}
                   //   title={news.title}
                 />
               </Card>

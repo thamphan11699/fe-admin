@@ -62,12 +62,12 @@ const Color = () => {
     clear(item.id)
       .then(({ data }) => {
         console.log(data)
-        toast.success('Delete item successfully!')
+        toast.success('Xóa màu sắc thành công!')
         getListItem({ ...searchObj, pageSize: 10, pageIndex: 1 })
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Delete item fail!')
+        toast.error('Xóa màu sắc không thành công!')
       })
     setItem({})
   }
@@ -189,8 +189,8 @@ const Color = () => {
       <ColorDialog open={openDialog} handleClose={handleCloseDialog} item={item} />
       <ConfirmDialog
         open={openConfirmDialog}
-        title="Confirm delete"
-        content="Are you sure delete item?"
+        title="xác nhận xóa"
+        content="Bạn muốn xóa màu này?"
         handleOk={handleOk}
         handleCancle={handleCancle}
       />
