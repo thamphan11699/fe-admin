@@ -143,7 +143,7 @@ const NewsDialog = ({ item, open, handleClose }) => {
         maxWidth="md"
         fullWidth
       >
-        <DialogTitle id="form-dialog-title">
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
           {news != null && news.id ? 'Chỉnh sửa' : 'Thêm mới'}
         </DialogTitle>
         <DialogContent dividers>

@@ -66,7 +66,9 @@ const WareHouseDialog = ({ item, open, handleClose }) => {
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="md">
-        <DialogTitle id="form-dialog-title">{wareHouse.id ? 'Chỉnh sửa ' : 'Tạo mới '}</DialogTitle>
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
+          {wareHouse.id ? 'Chỉnh sửa ' : 'Tạo mới '}
+        </DialogTitle>
         <DialogContent dividers>
           <Grid container spacing={3}>
             <Grid item md={12} xs={12}>

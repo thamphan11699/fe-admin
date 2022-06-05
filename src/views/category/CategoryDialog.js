@@ -146,7 +146,7 @@ const CategoryDialog = ({ item, open, handleClose }) => {
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="md">
-        <DialogTitle id="form-dialog-title">
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
           {category.id ? 'Chỉnh sửa danh mục' : 'Thêm mới danh mục'}
         </DialogTitle>
         <DialogContent dividers>

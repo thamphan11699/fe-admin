@@ -68,7 +68,7 @@ const ContextProviderDialog = ({ item, open, handleClose }) => {
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="md">
-        <DialogTitle id="form-dialog-title">
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
           {contextProvider.id ? 'Chỉnh sửa' : 'Thêm mới'}
         </DialogTitle>
         <DialogContent dividers>

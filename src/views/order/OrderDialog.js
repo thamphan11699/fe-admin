@@ -137,7 +137,7 @@ const OrderDialog = ({ item, open, handleClose }) => {
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="lg">
-        <DialogTitle id="form-dialog-title">
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
           {order.id ? 'Cập nhật đơn hàng' : 'Thêm mới đơn hàng'}
         </DialogTitle>
         <DialogContent dividers>

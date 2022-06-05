@@ -219,7 +219,7 @@ const ProductDialog = ({ item, open, handleClose }) => {
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" maxWidth="md">
-        <DialogTitle id="form-dialog-title">
+        <DialogTitle id="form-dialog-title" style={{ background: '#757ce8', color: 'white' }}>
           {product.id ? 'Edit Product' : 'Create Product'}
         </DialogTitle>
         <DialogContent dividers>
