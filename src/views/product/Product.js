@@ -111,7 +111,12 @@ const Product = () => {
     },
     { title: 'Tên Sản Phẩm', field: 'name', width: '50%' },
     { title: 'Mã Sản Phẩm', field: 'code', width: '20%' },
-    { title: 'Số lượng', field: 'quantity', width: '30%' },
+    {
+      title: 'Số lượng',
+      field: 'quantity',
+      width: '30%',
+      render: (row) => <span>{row.quantity ? row.quantity : '---'}</span>,
+    },
     { title: 'Màu sắc', field: 'color.name', width: '30%' },
     { title: 'Size', field: 'size', width: '30%' },
   ]

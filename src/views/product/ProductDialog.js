@@ -393,6 +393,21 @@ const ProductDialog = ({ item, open, handleClose }) => {
               <Grid item md={6} xs={12}>
                 <TextField
                   margin="dense"
+                  id="priceInput"
+                  label="Giá nhập vào"
+                  type="number"
+                  fullWidth
+                  name="priceInput"
+                  variant="outlined"
+                  value={product.priceInput ? product.priceInput : ''}
+                  onChange={handleChange}
+                />
+              </Grid>
+            )}
+            {product.parent != null && (
+              <Grid item md={6} xs={12}>
+                <TextField
+                  margin="dense"
                   id="peice"
                   label="Giá"
                   type="number"
